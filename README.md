@@ -21,9 +21,9 @@
    Car : {"name", "position")
 5. Car의 list를
 6. 입력받은 횟수만큼 Game을 실행
-   Game의 구성 : 각 Car마다 isCarMove()를 실행
-                 isCarMove() : Randoms.pickNumberInRange(0, 9);를 실행해서 4 이상이면 position에 '-'추가
-                 각 차가 한번씩 isCarMove()를 실행한 후에는 gameResult()를 실행해 준다.
+   Game의 구성 : 각 Game마다 round()를 실행
+                 round() : Randoms.pickNumberInRange(0, 9);를 실행해서 4 이상이면 position에 '-'추가
+                 round()가 한번 실행된 후에는 gameResult()를 실행해 준다.
                  gameResult() : Car이름과 position을 한번씩 출력
 7. 모든 게임이 끝난 후에는 가장 긴 길이의 position을 찾은 후, 해당 position의 길이와 일치하는 Car의 name을 winnerList에 저장한다.
 8. winnerList를 출력한다.
@@ -41,22 +41,21 @@
    - [x] Validater 호출해서 자동차 이름 검증 및 split
    - [ ] Validater 호출해서 시도 횟수 정수 검증 후 반환
 - [ ] 출력View
-   - [ ] 게임 하나를 마친 후 결과 출력
+   - [x] 게임 하나를 마친 후 결과 출력
    - [ ] 모든 게임을 마친 후 우승자 출력
-- [ ] Validater
-   - [x] 자동차 이름 검증
+- [x] Validater
+   - [x] 자동차 이름 검증 및 split
    - [x] 시도 횟수 정수 검증
-- [ ] Car
-   - [ ] CarnameValidater를 호출해 Carname List를 생성 
-   - [ ] Car이름 list를 바탕으로 객체 생성
-   - [ ] Car의 position을 생성/수정/반환
-- [ ] Game : Car list를 입력받음
-   - [ ] 각 Car에 대하여 RandomNumberGame을 실행한다.
+- [x] Car
+   - [x] Car이름 list를 바탕으로 객체 생성
+   - [x] Car의 position을 생성/수정/반환
+- [x] Game : Car list를 입력받음
+   - [x] 각 Car에 대하여 RandomNumberGame을 실행한다.
 - [ ] GameResult
-   - [ ] 게임 하나를 마치고 결과를 취합
+   - [x] 게임 하나를 마치고 결과를 취합
    - [ ] 모든 게임을 마치고 우승자 판별
 - [ ] Controller
-   - [ ] Car 객체 list를 생성
+   - [x] Car 객체 list를 생성
    - [ ] 시도할 횟수만큼 Game 반복 실행, 게임 하나가 끝날 때마다 출력 View 호출
    - [ ] 모든 게임이 끝난 후 GameResult를 호출, 모든 게임이 끝난 후 출력 View 호출
 
