@@ -4,11 +4,11 @@ import racingcar.ErrorMessage;
 
 import java.util.*;
 
-public class CarNameValidater {
+public class Validater {
 
 
 
-    public static List<String> validate(String rawNameString) throws IllegalAccessException {
+    public static List<String> nameValidateAndSplit(String rawNameString) throws IllegalAccessException {
 
         List<String> nameList = splitNames(rawNameString);
 
@@ -26,13 +26,21 @@ public class CarNameValidater {
             }
         }
         return nameList;
-
     };
 
     private static List<String> splitNames(String rawNameString) {
         List<String> list = Arrays.asList(rawNameString.trim().split(","));
         return list;
     }
+
+    public static void turnNumValidate(Integer turnNum) throws IllegalAccessException {
+        if(turnNum < 1) {
+            throw new IllegalAccessException(ErrorMessage.NEGATIVE_TURNNUM);
+        }
+    };
+
+
+
 
 
 

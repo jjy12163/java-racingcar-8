@@ -7,10 +7,9 @@ public class Application {
     public static void main(String[] args) {
 
         String rawNameString = InputView.readInputName();
-        int turn = InputView.readInputNumber();
+        int rawTurn = InputView.readInputNumber();
 
-
-        PlayRaceController playRaceController = new PlayRaceController(rawNameString, turn);
+        PlayRaceController playRaceController = new PlayRaceController(rawNameString, rawTurn);
         playRaceController.play();
 
 
