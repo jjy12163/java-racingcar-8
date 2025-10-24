@@ -3,7 +3,7 @@ package racingcar.Model;
 
 public class Car {
 
-    private final String name;
+    private String name;
     private String position;
 
     public Car(String name) {
