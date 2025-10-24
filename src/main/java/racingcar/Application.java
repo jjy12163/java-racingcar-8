@@ -6,8 +6,12 @@ import racingcar.View.InputView;
 public class Application {
     public static void main(String[] args) {
 
-        PlayRaceController playRaceController = new PlayRaceController(InputView.readInputName(), InputView.readInputNumber());
+        String rawNameString = InputView.readInputName();
+        int turn = InputView.readInputNumber();
 
+
+        PlayRaceController playRaceController = new PlayRaceController(rawNameString, turn);
+        playRaceController.play();
 
 
 
