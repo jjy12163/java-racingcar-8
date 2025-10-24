@@ -38,8 +38,28 @@
 |Domain|Car, Game, GameResult|Car 객체 생성, 각 회차 당 Game 진행, 각 Game당 Car의 움직임 유무 결정, 각 게임과 최종 게임 결과 판정|
 
 
-
-
+# 구현 기능 목록
+- [ ] 입력View : 자동차 이름 문자열, 시도 횟수 정수 입력 기능
+   - [ ] 자동차 이름 빈칸 검증 후 split
+   - [ ] 시도 횟수 정수 검증 후 반환
+- [ ] 출력View
+   - [ ] 게임 하나를 마친 후 결과 출력
+   - [ ] 모든 게임을 마친 후 우승자 출력
+- [ ] Car
+   - [ ] CarnameValidater를 호출해 Carname List를 생성 
+   - [ ] Car이름 list를 바탕으로 객체 생성
+   - [ ] Car의 position을 생성/수정/반환
+- [ ] CarnameValidater
+   - [ ] 자동차 이름 검증
+- [ ] Game : Car list를 입력받음
+   - [ ] 각 Car에 대하여 RandomNumberGame을 실행한다.
+- [ ] GameResult
+   - [ ] 게임 하나를 마치고 결과를 취합
+   - [ ] 모든 게임을 마치고 우승자 판별
+- [ ] Controller
+   - [ ] Car 객체 list를 생성
+   - [ ] 시도할 횟수만큼 Game 반복 실행, 게임 하나가 끝날 때마다 출력 View 호출
+   - [ ] 모든 게임이 끝난 후 GameResult를 호출, 모든 게임이 끝난 후 출력 View 호출
 
 
 
