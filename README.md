@@ -33,7 +33,8 @@
 |:---:|:---:|:---|
 |View|Input, Output|콘솔 입출력 담당|
 |Controller|Application, PlayRaceController|'Car생성 -> Game 진행 -> 결과 출력' 흐름 제어|
-|Domain|Car, Game, GameResult|Car 객체 생성, 각 회차 당 Game 진행, 각 Game당 Car의 움직임 유무 결정, 각 게임과 최종 게임 결과 판정|
+|Domain|Car, Game|Car 객체 생성, 각 회차 당 Game 진행|
+|Service|Validator, GameResult|입력된 자동차 이름과 시도 횟수 검증, 각 게임과 최종 게임 결과 판정|
 
 
 # 구현 기능 목록
