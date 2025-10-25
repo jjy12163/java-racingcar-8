@@ -37,12 +37,12 @@
 
 
 # 구현 기능 목록
-- [ ] 입력View : 자동차 이름 문자열, 시도 횟수 정수 입력 기능
+- [x] 입력View : 자동차 이름 문자열, 시도 횟수 정수 입력 기능
    - [x] Validater 호출해서 자동차 이름 검증 및 split
-   - [ ] Validater 호출해서 시도 횟수 정수 검증 후 반환
-- [ ] 출력View
+   - [x] Validater 호출해서 시도 횟수 정수 검증 후 반환
+- [x] 출력View
    - [x] 게임 하나를 마친 후 결과 출력
-   - [ ] 모든 게임을 마친 후 우승자 출력
+   - [x] 모든 게임을 마친 후 우승자 출력
 - [x] Validater
    - [x] 자동차 이름 검증 및 split
    - [x] 시도 횟수 정수 검증
@@ -51,13 +51,13 @@
    - [x] Car의 position을 생성/수정/반환
 - [x] Game : Car list를 입력받음
    - [x] 각 Car에 대하여 RandomNumberGame을 실행한다.
-- [ ] GameResult
+- [x] GameResult
    - [x] 게임 하나를 마치고 결과를 취합
-   - [ ] 모든 게임을 마치고 우승자 판별
-- [ ] Controller
+   - [x] 모든 게임을 마치고 우승자 판별
+- [x] Controller
    - [x] Car 객체 list를 생성
-   - [ ] 시도할 횟수만큼 Game 반복 실행, 게임 하나가 끝날 때마다 출력 View 호출
-   - [ ] 모든 게임이 끝난 후 GameResult를 호출, 모든 게임이 끝난 후 출력 View 호출
+   - [x] 시도할 횟수만큼 Game 반복 실행, 게임 하나가 끝날 때마다 출력 View 호출
+   - [x] 모든 게임이 끝난 후 GameResult를 호출, 모든 게임이 끝난 후 출력 View 호출
 
 
 
