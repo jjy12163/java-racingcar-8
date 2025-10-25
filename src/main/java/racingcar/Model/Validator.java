@@ -4,15 +4,18 @@ import racingcar.ErrorMessage;
 
 import java.util.*;
 
-public class Validater {
-
-
+public class Validator {
 
     public static List<String> nameValidateAndSplit(String rawNameString) throws IllegalAccessException {
+
 
         List<String> nameList = splitNames(rawNameString);
 
         Set<String> set = new HashSet<>();
+
+        if(rawNameString.trim().endsWith(",")) {
+            throw new IllegalAccessException(ErrorMessage.INPUT_BLANK);
+        }
 
         for(String name : nameList) {
             if(name.isEmpty()) {

@@ -2,7 +2,7 @@ package racingcar.Controller;
 
 import racingcar.Model.Car;
 import racingcar.Model.Game;
-import racingcar.Model.Validater;
+import racingcar.Model.Validator;
 import racingcar.View.OutputView;
 
 import java.util.ArrayList;
@@ -22,8 +22,8 @@ public class PlayRaceController {
 
     public void play() {
         try {
-            Validater.turnNumValidate(turn);
-            List<String> carNames = Validater.nameValidateAndSplit(rawNameString);
+            Validator.turnNumValidate(turn);
+            List<String> carNames = Validator.nameValidateAndSplit(rawNameString);
 
             List<Car> cars = new ArrayList<>();
 
