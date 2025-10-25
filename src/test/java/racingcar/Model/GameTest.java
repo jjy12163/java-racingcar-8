@@ -14,9 +14,9 @@ public class GameTest {
     @DisplayName("Game 테스트")
     public void roundTest() {
         List<String> carNames = new ArrayList<>();
-        carNames.add("A");
-        carNames.add("B");
-        carNames.add("C");
+        carNames.add("pobi");
+        carNames.add("woni");
+        carNames.add("jun");
 
         List<Car> cars = new ArrayList<>();
 
@@ -24,6 +24,8 @@ public class GameTest {
             Car car = new Car(carName);
             cars.add(car);
         }
+        Game game = new Game(cars);
+        game.round();
     }
 
 }
