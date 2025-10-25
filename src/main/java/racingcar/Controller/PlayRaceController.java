@@ -8,6 +8,9 @@ import racingcar.View.OutputView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static racingcar.View.OutputView.printFinalResult;
+import static racingcar.View.OutputView.printOneRound;
+
 
 public class PlayRaceController {
 
@@ -34,7 +37,11 @@ public class PlayRaceController {
             Game game = new Game(cars);
             for(int i =0 ; i < turn; i++) {
                 game.round();
+                printOneRound(cars);
             }
+
+            printFinalResult(cars);
+
 
         } catch (IllegalAccessException e) {
             OutputView.printError(e.getMessage());
