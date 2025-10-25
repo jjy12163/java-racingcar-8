@@ -1,13 +1,13 @@
-package racingcar.Model;
+package racingcar.Domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
 
 import java.util.List;
 
-
 public class Game {
 
     private List<Car> cars;
+    private int randomNum;
 
     public Game(List<Car> cars) {
         this.cars = cars;
@@ -28,7 +28,4 @@ public class Game {
         }
         return false;
     }
-
-
-
 }

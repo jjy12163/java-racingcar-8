@@ -1,8 +1,8 @@
 package racingcar.Controller;
 
-import racingcar.Model.Car;
-import racingcar.Model.Game;
-import racingcar.Model.Validator;
+import racingcar.Domain.Car;
+import racingcar.Domain.Game;
+import racingcar.Service.Validator;
 import racingcar.View.OutputView;
 
 import java.util.ArrayList;
@@ -10,7 +10,6 @@ import java.util.List;
 
 import static racingcar.View.OutputView.printFinalResult;
 import static racingcar.View.OutputView.printOneRound;
-
 
 public class PlayRaceController {
 
@@ -21,7 +20,6 @@ public class PlayRaceController {
         this.rawNameString = rawNameString;
         this.turn = rawTurn;
     }
-
 
     public void play() {
         try {
@@ -46,9 +44,5 @@ public class PlayRaceController {
         } catch (IllegalAccessException e) {
             OutputView.printError(e.getMessage());
         }
-
-
     }
-
-
 }

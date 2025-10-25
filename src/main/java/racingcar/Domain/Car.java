@@ -1,5 +1,4 @@
-package racingcar.Model;
-
+package racingcar.Domain;
 
 public class Car {
 

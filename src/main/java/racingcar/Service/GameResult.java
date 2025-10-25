@@ -1,6 +1,6 @@
-package racingcar.Model;
+package racingcar.Service;
 
-import racingcar.ErrorMessage;
+import racingcar.Domain.Car;
 
 import java.util.Comparator;
 import java.util.List;
@@ -15,8 +15,4 @@ public class GameResult {
                 .stream().collect(Collectors.joining(", "));
         return maxPositionCars;
     };
-
-
-
-
 }

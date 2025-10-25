@@ -1,10 +1,10 @@
 package racingcar.View;
 
-import racingcar.Model.Car;
+import racingcar.Domain.Car;
 
 import java.util.List;
 
-import static racingcar.Model.GameResult.turnNumValidate;
+import static racingcar.Service.GameResult.turnNumValidate;
 
 public class OutputView {
 

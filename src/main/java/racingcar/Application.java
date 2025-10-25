@@ -11,8 +11,5 @@ public class Application {
 
         PlayRaceController playRaceController = new PlayRaceController(rawNameString, rawTurn);
         playRaceController.play();
-
-
-
     }
 }

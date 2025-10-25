@@ -1,4 +1,4 @@
-package racingcar.Model;
+package racingcar.Service;
 
 import racingcar.ErrorMessage;
 
@@ -7,7 +7,6 @@ import java.util.*;
 public class Validator {
 
     public static List<String> nameValidateAndSplit(String rawNameString) throws IllegalAccessException {
-
 
         List<String> nameList = splitNames(rawNameString);
 
@@ -41,10 +40,4 @@ public class Validator {
             throw new IllegalAccessException(ErrorMessage.NEGATIVE_TURNNUM);
         }
     };
-
-
-
-
-
-
 }
