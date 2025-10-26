@@ -12,21 +12,22 @@
 # 로직 순서
 1. 자동차 string, 시도할 횟수 int 형식으로 입력받기
 2. 시도할 횟수가 양수 정수인지 확인
-   (에러 케이스 : -1 => 시도할 횟수는 양수로 입력해 주세요)
+   (에러 케이스 : -1 or n => 시도할 횟수는 양수 정수로 입력해 주세요)
 3. 자동차 string을 쉼표 기준으로 split한다.
    (에러 케이스 : string이 쉼표로 끝나는 경우 혹은 이름에 공백이 있는 경우(pobi, jun,) / (pobi,, jun)
+                 자동차 이름이 영어가 아닌 경우(pobi3)
                  이름 길이가 5자를 넘을 경우(pobijun, woni)
                  중복된 이름이 있을 경우(pobi, pobi, jun)
-4. 입력받은 이름을 바탕으로 Car를 생성
+5. 입력받은 이름을 바탕으로 Car를 생성
    Car : {"name", "position")
-5. Car의 list를
-6. 입력받은 횟수만큼 Game을 실행
+6. Car의 list를
+7. 입력받은 횟수만큼 Game을 실행
    Game의 구성 : 각 Game마다 round()를 실행
                  round() : Randoms.pickNumberInRange(0, 9);를 실행해서 4 이상이면 position에 '-'추가
                  round()가 한번 실행된 후에는 gameResult()를 실행해 준다.
                  gameResult() : Car이름과 position을 한번씩 출력
-7. 모든 게임이 끝난 후에는 가장 긴 길이의 position을 찾은 후, 해당 position의 길이와 일치하는 Car의 name을 winnerList에 저장한다.
-8. winnerList를 출력한다.
+8. 모든 게임이 끝난 후에는 가장 긴 길이의 position을 찾은 후, 해당 position의 길이와 일치하는 Car의 name을 winnerList에 저장한다.
+9. winnerList를 출력한다.
 
 # 설계 구조
 |계층|클래스|역할|
@@ -59,12 +60,3 @@
    - [x] Car 객체 list를 생성
    - [x] 시도할 횟수만큼 Game 반복 실행, 게임 하나가 끝날 때마다 출력 View 호출
    - [x] 모든 게임이 끝난 후 GameResult를 호출, 모든 게임이 끝난 후 출력 View 호출
-
-
-
-
-
-
-
-
-
