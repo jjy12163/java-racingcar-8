@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GameResultTest {
 
@@ -17,6 +18,7 @@ public class GameResultTest {
 
         List<String> carNames = new ArrayList<>();
         carNames.add("pobi");
+        carNames.add("woni");
 
         List<Car> cars = new ArrayList<>();
 
@@ -26,10 +28,13 @@ public class GameResultTest {
         }
 
         Car pobi = cars.get(0);
+        Car woni = cars.get(1);
         pobi.setPosition("-");
+        woni.setPosition("-");
 
         List<String> answer = new ArrayList<>();
         answer.add("pobi");
+        answer.add("woni");
 
         List<String> gameResult = GameResult.turnNumValidate(cars);
         assertThat(gameResult).isEqualTo(answer);

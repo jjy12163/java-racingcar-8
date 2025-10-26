@@ -6,25 +6,25 @@ import java.util.*;
 
 public class Validator {
 
-    public static List<String> nameValidateAndSplit(String rawNameString) throws IllegalAccessException {
+    public static List<String> nameValidateAndSplit(String rawNameString) throws IllegalArgumentException {
 
         List<String> nameList = splitNames(rawNameString);
 
         Set<String> set = new HashSet<>();
 
         if(rawNameString.trim().endsWith(",")) {
-            throw new IllegalAccessException(ErrorMessage.INPUT_BLANK);
+            throw new IllegalArgumentException(ErrorMessage.INPUT_BLANK);
         }
 
         for(String name : nameList) {
             if(name.isEmpty()) {
-                throw new IllegalAccessException(ErrorMessage.INPUT_BLANK);
+                throw new IllegalArgumentException(ErrorMessage.INPUT_BLANK);
             }
             else if(name.length() > 5) {
-                throw new IllegalAccessException(ErrorMessage.LENGTH_OVER);
+                throw new IllegalArgumentException(ErrorMessage.LENGTH_OVER);
             }
             else if(!set.add(name)) {
-                throw new IllegalAccessException(ErrorMessage.DUPLICATE_NAME);
+                throw new IllegalArgumentException(ErrorMessage.DUPLICATE_NAME);
             }
         }
         return nameList;
@@ -35,16 +35,16 @@ public class Validator {
         return list;
     }
 
-    public static Integer turnNumValidate(String turnNum) throws IllegalAccessException {
+    public static Integer turnNumValidate(String turnNum) throws IllegalArgumentException {
         try {
             int turn = Integer.parseInt(turnNum);
 
             if (turn < 1) {
-                throw new IllegalAccessException(ErrorMessage.NEGATIVE_TURNNUM);
+                throw new IllegalArgumentException(ErrorMessage.NEGATIVE_TURNNUM);
             }
             return turn;
         } catch (NumberFormatException e) {
-            throw new IllegalAccessException(ErrorMessage.NEGATIVE_TURNNUM);
+            throw new IllegalArgumentException(ErrorMessage.NEGATIVE_TURNNUM);
         }
 
     };

@@ -22,27 +22,21 @@ public class PlayRaceController {
     }
 
     public void play() {
-        try {
-            int turn = Validator.turnNumValidate(rawTurn);
-            List<String> carNames = Validator.nameValidateAndSplit(rawNameString);
+        int turn = Validator.turnNumValidate(rawTurn);
+        List<String> carNames = Validator.nameValidateAndSplit(rawNameString);
 
-            List<Car> cars = new ArrayList<>();
+        List<Car> cars = new ArrayList<>();
 
-            for (int i = 0; i < carNames.size(); i++) {
-                cars.add(new Car(carNames.get(i)));
-            }
-
-            Game game = new Game(cars);
-            for(int i =0 ; i < turn; i++) {
-                game.round();
-                printOneRound(cars);
-            }
-
-            printFinalResult(cars);
-
-
-        } catch (IllegalAccessException e) {
-            OutputView.printError(e.getMessage());
+        for (int i = 0; i < carNames.size(); i++) {
+            cars.add(new Car(carNames.get(i)));
         }
+
+        Game game = new Game(cars);
+        for(int i =0 ; i < turn; i++) {
+            game.round();
+            printOneRound(cars);
+        }
+
+        printFinalResult(cars);
     }
 }

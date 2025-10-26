@@ -20,8 +20,4 @@ public class OutputView {
         String result = String.join(", ", finalCars);
         System.out.println("최종 우승자 : " + result);
     }
-
-    public static void printError(String message) {
-        System.out.println("[ERROR] " + message);
-    }
 }
