@@ -42,8 +42,10 @@ public class Validator {
             if (turn < 1) {
                 throw new IllegalAccessException(ErrorMessage.NEGATIVE_TURNNUM);
             }
+            return turn;
         } catch (NumberFormatException e) {
             throw new IllegalAccessException(ErrorMessage.NEGATIVE_TURNNUM);
         }
+
     };
 }
