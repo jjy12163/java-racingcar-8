@@ -14,16 +14,16 @@ import static racingcar.View.OutputView.printOneRound;
 public class PlayRaceController {
 
     private final String rawNameString;
-    private final int turn;
+    private final String rawTurn;
 
-    public PlayRaceController(String rawNameString, Integer rawTurn) {
+    public PlayRaceController(String rawNameString, String rawTurn) {
         this.rawNameString = rawNameString;
-        this.turn = rawTurn;
+        this.rawTurn = rawTurn;
     }
 
     public void play() {
         try {
-            Validator.turnNumValidate(turn);
+            int turn = Validator.turnNumValidate(rawTurn);
             List<String> carNames = Validator.nameValidateAndSplit(rawNameString);
 
             List<Car> cars = new ArrayList<>();

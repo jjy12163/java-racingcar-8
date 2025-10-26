@@ -69,7 +69,7 @@ public class ValidatorTest {
     @Test
     @DisplayName("시도 횟수로 음수 횟수 입력되면 NEGATIVE_TURNNUM 에러 실행")
     public void turnNumValidate_x() throws IllegalAccessException {
-        int turnNum = -2;
+        String turnNum = "-2";
 
         assertThatThrownBy(() -> Validator.turnNumValidate(turnNum))
                 .isInstanceOf(IllegalAccessException.class)

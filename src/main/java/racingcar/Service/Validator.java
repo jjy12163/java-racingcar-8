@@ -35,8 +35,14 @@ public class Validator {
         return list;
     }
 
-    public static void turnNumValidate(Integer turnNum) throws IllegalAccessException {
-        if(turnNum < 1) {
+    public static Integer turnNumValidate(String turnNum) throws IllegalAccessException {
+        try {
+            int turn = Integer.parseInt(turnNum);
+
+            if (turn < 1) {
+                throw new IllegalAccessException(ErrorMessage.NEGATIVE_TURNNUM);
+            }
+        } catch (NumberFormatException e) {
             throw new IllegalAccessException(ErrorMessage.NEGATIVE_TURNNUM);
         }
     };
