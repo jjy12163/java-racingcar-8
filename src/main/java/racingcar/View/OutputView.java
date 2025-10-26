@@ -16,8 +16,9 @@ public class OutputView {
     }
 
     public static void printFinalResult(List<Car> cars) {
-        String maxPositionCars = turnNumValidate(cars);
-        System.out.println("최종 우승자 : " + maxPositionCars);
+        List<String> finalCars = turnNumValidate(cars);
+        String result = String.join(" ", finalCars);
+        System.out.println("최종 우승자 : " + result);
     }
 
     public static void printError(String message) {
