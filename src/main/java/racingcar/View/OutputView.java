@@ -17,7 +17,7 @@ public class OutputView {
 
     public static void printFinalResult(List<Car> cars) {
         List<String> finalCars = turnNumValidate(cars);
-        String result = String.join(" ", finalCars);
+        String result = String.join(", ", finalCars);
         System.out.println("최종 우승자 : " + result);
     }
 
