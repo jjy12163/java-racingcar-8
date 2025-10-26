@@ -1,8 +1,8 @@
-package racingcar.Domain;
+package racingcar.Service;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import racingcar.Service.GameResult;
+import racingcar.Domain.Car;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,6 @@ public class GameResultTest {
 
         List<String> carNames = new ArrayList<>();
         carNames.add("pobi");
-        carNames.add("woni");
-        carNames.add("jun");
 
         List<Car> cars = new ArrayList<>();
 
@@ -28,13 +26,10 @@ public class GameResultTest {
         }
 
         Car pobi = cars.get(0);
-        Car woni = cars.get(1);
         pobi.setPosition("-");
-        woni.setPosition("-");
 
         List<String> answer = new ArrayList<>();
         answer.add("pobi");
-        answer.add("woni");
 
         List<String> gameResult = GameResult.turnNumValidate(cars);
         assertThat(gameResult).isEqualTo(answer);

@@ -1,4 +1,4 @@
-package racingcar.Domain;
+package racingcar.Service;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,6 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import racingcar.ErrorMessage;
-import racingcar.Service.Validator;
 
 public class ValidatorTest {
 
